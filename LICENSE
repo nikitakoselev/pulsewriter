@@ -1,0 +1,34 @@
+Business Source License 1.1
+Licensor: Nikita Koselev
+Licensed Work: PulseWriter
+The Licensed Work is (c) 2025 Nikita Koselev
+
+Licensed Work: PulseWriter (the “Software”)
+Licensor: Nikita Koselev
+
+Additional Use Grant: You may make non-production use of the Software, such as for evaluation, personal projects, research, or development.
+
+Change Date: 2029-01-01
+Change License: Apache License, Version 2.0
+
+For the avoidance of doubt, this License does not grant you the right to use the Software in production environments or for commercial purposes without a separate commercial license from the Licensor.
+
+BUSL 1.1 Standard Text:
+-------------------------------------------------------------------
+Business Source License 1.1
+
+Terms
+The Licensor hereby grants you the right to copy, modify, create derivative works, redistribute, and make non-production use of the Licensed Work. The Licensor may make an Additional Use Grant, above, permitting limited production use.
+
+Effective on the Change Date, the Licensor will make the Licensed Work available under the Change License as provided above.
+
+Production use of the Licensed Work, including use in services for third parties, requires a separate commercial license from the Licensor.
+
+-------------------------------------------------------------------
+This License does not grant you any trademark rights for the Licensed Work.
+
+Disclaimer
+THE LICENSED WORK IS PROVIDED “AS IS”. LICENSOR MAKES NO WARRANTIES, EXPRESS OR IMPLIED, AND DISCLAIMS ALL IMPLIED WARRANTIES INCLUDING ANY IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL LICENSOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES.
+
+-------------------------------------------------------------------
+Full license text: https://mariadb.com/bsl11/

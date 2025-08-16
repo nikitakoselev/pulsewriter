@@ -1,0 +1,7 @@
+# Blog repo config
+repo: "nikitakoselev/nikitakoselev.github.io"
+content_dir: "content"   # adjust for your blog engine; for Jekyll use `_posts`
+engine: "jekyll"        # "jekyll" | "hugo" | "mkdocs"
+jekyll:
+  posts_dir: "_posts"
+  filename_format: "%Y-%m-%d-{{slug}}.md"

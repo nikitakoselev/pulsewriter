@@ -1,0 +1,9 @@
+n8n Workflow (conceptual):
+- Cron (09:00 Europe/Tallinn)
+- HTTP Request -> POST http://localhost:8000/generate { topic/persona/platforms }
+- Function: build preview
+- Telegram: Send Message with inline buttons (Approve, Revise, Discard)
+- If Approve:
+  - GitHub: create branch + commit post.md + open PR
+- If Revise:
+  - Ask for instructions -> HTTP Request /revise -> edit message with new preview
