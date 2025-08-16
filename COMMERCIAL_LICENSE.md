@@ -2,7 +2,7 @@
 
 For **production or commercial use** of `contentkit`, you must obtain a commercial license from the Licensor.
 
-Contact: nikita (at) example.com (replace with your real contact)
+Contact: nikita.koselev@gmail.com
 Typical grant includes:
 - Right to use in production and for customer-facing workflows.
 - Indemnity and support SLAs.
