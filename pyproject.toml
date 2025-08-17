@@ -22,5 +22,12 @@ dependencies = [
 [project.optional-dependencies]
 dev = ["pytest>=8.2.0", "pytest-cov>=5.0.0"]
 
-[tool.setuptools.packages.find]
-where = ["packages"]
+[project.scripts]
+pulsewriter = "pulsewriter_cli.main:app"
+
+[tool.setuptools]
+packages = ["pulsewriter_core", "pulsewriter_cli", "pulsewriter_api"]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+pulsewriter_core = ["templates/*.j2"]

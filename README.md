@@ -14,8 +14,8 @@ python -m venv .venv && . .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -e .[dev]
 
 # Try CLI
-python -m pulsewriter_cli --help
-python -m pulsewriter_cli transform examples/input.md --platforms linkedin x devto --out-dir ./out
+pulsewriter --help
+pulsewriter examples/input.md --platforms linkedin --platforms x --platforms devto --out-dir ./out
 
 # Run API
 uvicorn pulsewriter_api.main:app --reload
@@ -25,12 +25,14 @@ uvicorn pulsewriter_api.main:app --reload
 ## Project layout
 
 ```
-packages/
-  core/pulsewriter_core/         # Open core: transforms, templates, validators
-  cli/pulsewriter_cli/           # Typer CLI (calls core)
-  api/pulsewriter_api/           # FastAPI (calls core)
+src/
+  pulsewriter_core/         # Open core: transforms, templates, validators
+  pulsewriter_cli/          # Typer CLI (calls core)
+  pulsewriter_api/          # FastAPI (calls core)
 examples/                       # Sample input & config
 recipes/n8n/                    # (Optional) n8n workflow stubs
+tests/                          # Test suite
+connectors/                     # Optional helper modules
 ```
 
 ## License
