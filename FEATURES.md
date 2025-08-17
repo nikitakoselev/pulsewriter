@@ -4,7 +4,7 @@ Status: 🟢 Ready · 🟡 In Progress · 🔴 Blocked · ✅ Done
 
 | ID | Feature | Status | Notes / Acceptance Criteria | Owner |
 |----|---------|--------|-----------------------------|-------|
-| F-001 | CLI: transform markdown → blog/LinkedIn/X/Dev.to | ✅ | `contentkit_cli transform` writes files to /out | core |
+| F-001 | CLI: transform markdown → blog/LinkedIn/X/Dev.to | ✅ | `pulsewriter` writes files to /out | core |
 | F-002 | API: `/generate` + `/revise` | ✅ | Accepts `topic` or `body_markdown`, returns drafts | api |
 | F-003 | Templates: tone/persona system | ✅ | Jinja templates parametrize `{tone, persona, word_target}` | core |
 | F-004 | GitHub PR helper (blog repo) | 🟢 | Function: create branch, commit file, open PR to `nikitakoselev/nikitakoselev.github.io` | connectors |

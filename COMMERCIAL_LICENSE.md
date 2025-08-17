@@ -1,6 +1,6 @@
 # Commercial License Terms (Summary)
 
-For **production or commercial use** of `contentkit`, you must obtain a commercial license from the Licensor.
+For **production or commercial use** of `PulseWriter`, you must obtain a commercial license from the Licensor.
 
 Contact: nikita.koselev@gmail.com
 Typical grant includes:

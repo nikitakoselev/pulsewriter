@@ -6,18 +6,59 @@ This MVP intentionally keeps logic simple (template-based) so you can ship fast;
 
 ## Quick start
 
+### 1. Create and activate a virtual environment
+
+**macOS / Linux (bash or zsh)**
+
 ```bash
-# Create & activate venv (example)
-python -m venv .venv && . .venv/bin/activate   # Windows: .venv\Scripts\activate
+python -m venv .venv
+source .venv/bin/activate
+```
 
-# Install
+**Windows PowerShell**
+
+```powershell
+python -m venv .venv
+\.venv\Scripts\Activate.ps1
+```
+
+**Windows CMD**
+
+```cmd
+python -m venv .venv
+\.venv\Scripts\activate.bat
+```
+
+### 2. Install dependencies
+
+**macOS / Linux**
+
+```bash
 pip install -e .[dev]
+```
 
-# Try CLI
+**Windows PowerShell**
+
+```powershell
+pip install -e ".[dev]"
+```
+
+**Windows CMD**
+
+```cmd
+pip install -e .[dev]
+```
+
+### 3. Run the CLI
+
+```bash
 pulsewriter --help
 pulsewriter examples/input.md --platforms linkedin --platforms x --platforms devto --out-dir ./out
+```
 
-# Run API
+### 4. Run the API
+
+```bash
 uvicorn pulsewriter_api.main:app --reload
 # POST /generate with JSON: {"topic":"Impact to Cashflow","platforms":["blog","linkedin","x"]}
 ```
@@ -45,7 +86,6 @@ You may run, modify, and use non-production internally. **Production/commercial 
 - v0.2: add optional LLM augment in core (behind a flag)
 - v0.3: connectors (Buffer/Notion/GitHub PR helper)
 - v0.4: n8n nodes + Telegram bot adapter
-```
 
 
 ---
