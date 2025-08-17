@@ -1,9 +1,9 @@
 from fastapi import FastAPI, Body
 from pydantic import BaseModel
 from typing import List, Optional, Dict, Any
-from contentkit_core import TransformConfig, generate, revise
+from pulsewriter_core import TransformConfig, generate, revise
 
-app = FastAPI(title="contentkit API", version="0.1.0")
+app = FastAPI(title="PulseWriter API", version="0.1.0")
 
 class GenerateRequest(BaseModel):
     topic: Optional[str] = None

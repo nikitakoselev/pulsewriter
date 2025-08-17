@@ -6,31 +6,82 @@ This MVP intentionally keeps logic simple (template-based) so you can ship fast;
 
 ## Quick start
 
+### 1. Create and activate a virtual environment
+
+**macOS / Linux (bash or zsh)**
+
 ```bash
-# Create & activate venv (example)
-python -m venv .venv && . .venv/bin/activate   # Windows: .venv\Scripts\activate
+python -m venv .venv       # -m: run the venv module to create env in .venv
+source .venv/bin/activate  # activate the virtual environment
+```
 
-# Install
+**Windows PowerShell**
+
+```powershell
+python -m venv .venv        # -m: run the venv module; .venv is env folder
+.\.venv\Scripts\Activate.ps1  # activate the virtual environment
+```
+
+**Windows CMD**
+
+```cmd
+python -m venv .venv
+REM -m: run the venv module; .venv is env folder
+.\.venv\Scripts\activate.bat
+REM Activate the virtual environment
+```
+
+### 2. Install dependencies
+
+**macOS / Linux**
+
+```bash
+pip install -e .[dev]        # -e: editable install; .[dev]: include dev extras
+```
+
+**Windows PowerShell**
+
+```powershell
+pip install -e ".[dev]"     # -e: editable install; "[dev]": include dev extras
+```
+
+**Windows CMD**
+
+```cmd
 pip install -e .[dev]
+REM -e: editable install
+REM .[dev]: include dev extras
+```
 
-# Try CLI
-python -m PulseWriter_cli --help
-python -m PulseWriter_cli transform examples/input.md --platforms linkedin x devto --out-dir ./out
+### 3. Run the CLI
 
-# Run API
-uvicorn PulseWriter_api.main:app --reload
+```bash
+pulsewriter --help  # show CLI usage and exit
+pulsewriter examples/input.md \                     # source markdown
+  --platforms linkedin \                            # include LinkedIn draft
+  --platforms x \                                   # include X (Twitter) draft
+  --platforms devto \                               # include Dev.to draft
+  --out-dir ./out                                  # write output files to ./out
+```
+
+### 4. Run the API
+
+```bash
+uvicorn pulsewriter_api.main:app --reload  # --reload: restart on code changes
 # POST /generate with JSON: {"topic":"Impact to Cashflow","platforms":["blog","linkedin","x"]}
 ```
 
 ## Project layout
 
 ```
-packages/
-  core/PulseWriter_core/         # Open core: transforms, templates, validators
-  cli/PulseWriter_cli/           # Typer CLI (calls core)
-  api/PulseWriter_api/           # FastAPI (calls core)
+src/
+  pulsewriter_core/         # Open core: transforms, templates, validators
+  pulsewriter_cli/          # Typer CLI (calls core)
+  pulsewriter_api/          # FastAPI (calls core)
 examples/                       # Sample input & config
 recipes/n8n/                    # (Optional) n8n workflow stubs
+tests/                          # Test suite
+connectors/                     # Optional helper modules
 ```
 
 ## License
@@ -43,7 +94,6 @@ You may run, modify, and use non-production internally. **Production/commercial 
 - v0.2: add optional LLM augment in core (behind a flag)
 - v0.3: connectors (Buffer/Notion/GitHub PR helper)
 - v0.4: n8n nodes + Telegram bot adapter
-```
 
 
 ---
