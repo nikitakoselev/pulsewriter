@@ -1,9 +1,9 @@
 import typer
 from pathlib import Path
 from typing import List
-from contentkit_core import TransformConfig, generate, save_text, load_markdown
+from pulsewriter_core import TransformConfig, generate, save_text, load_markdown
 
-app = typer.Typer(help="contentkit CLI — transform a single markdown into platform drafts.")
+app = typer.Typer(help="PulseWriter CLI — transform a single markdown into platform drafts.")
 
 @app.command()
 def transform(

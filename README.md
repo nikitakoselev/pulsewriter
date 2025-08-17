@@ -14,11 +14,11 @@ python -m venv .venv && . .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -e .[dev]
 
 # Try CLI
-python -m PulseWriter_cli --help
-python -m PulseWriter_cli transform examples/input.md --platforms linkedin x devto --out-dir ./out
+python -m pulsewriter_cli --help
+python -m pulsewriter_cli transform examples/input.md --platforms linkedin x devto --out-dir ./out
 
 # Run API
-uvicorn PulseWriter_api.main:app --reload
+uvicorn pulsewriter_api.main:app --reload
 # POST /generate with JSON: {"topic":"Impact to Cashflow","platforms":["blog","linkedin","x"]}
 ```
 
@@ -26,9 +26,9 @@ uvicorn PulseWriter_api.main:app --reload
 
 ```
 packages/
-  core/PulseWriter_core/         # Open core: transforms, templates, validators
-  cli/PulseWriter_cli/           # Typer CLI (calls core)
-  api/PulseWriter_api/           # FastAPI (calls core)
+  core/pulsewriter_core/         # Open core: transforms, templates, validators
+  cli/pulsewriter_cli/           # Typer CLI (calls core)
+  api/pulsewriter_api/           # FastAPI (calls core)
 examples/                       # Sample input & config
 recipes/n8n/                    # (Optional) n8n workflow stubs
 ```
