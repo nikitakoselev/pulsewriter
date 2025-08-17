@@ -11,22 +11,24 @@ This MVP intentionally keeps logic simple (template-based) so you can ship fast;
 **macOS / Linux (bash or zsh)**
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
+python -m venv .venv       # -m: run the venv module to create env in .venv
+source .venv/bin/activate  # activate the virtual environment
 ```
 
 **Windows PowerShell**
 
 ```powershell
-python -m venv .venv
-\.venv\Scripts\Activate.ps1
+python -m venv .venv        # -m: run the venv module; .venv is env folder
+.\.venv\Scripts\Activate.ps1  # activate the virtual environment
 ```
 
 **Windows CMD**
 
 ```cmd
 python -m venv .venv
-\.venv\Scripts\activate.bat
+REM -m: run the venv module; .venv is env folder
+.\.venv\Scripts\activate.bat
+REM Activate the virtual environment
 ```
 
 ### 2. Install dependencies
@@ -34,32 +36,38 @@ python -m venv .venv
 **macOS / Linux**
 
 ```bash
-pip install -e .[dev]
+pip install -e .[dev]        # -e: editable install; .[dev]: include dev extras
 ```
 
 **Windows PowerShell**
 
 ```powershell
-pip install -e ".[dev]"
+pip install -e ".[dev]"     # -e: editable install; "[dev]": include dev extras
 ```
 
 **Windows CMD**
 
 ```cmd
 pip install -e .[dev]
+REM -e: editable install
+REM .[dev]: include dev extras
 ```
 
 ### 3. Run the CLI
 
 ```bash
-pulsewriter --help
-pulsewriter examples/input.md --platforms linkedin --platforms x --platforms devto --out-dir ./out
+pulsewriter --help  # show CLI usage and exit
+pulsewriter examples/input.md \                     # source markdown
+  --platforms linkedin \                            # include LinkedIn draft
+  --platforms x \                                   # include X (Twitter) draft
+  --platforms devto \                               # include Dev.to draft
+  --out-dir ./out                                  # write output files to ./out
 ```
 
 ### 4. Run the API
 
 ```bash
-uvicorn pulsewriter_api.main:app --reload
+uvicorn pulsewriter_api.main:app --reload  # --reload: restart on code changes
 # POST /generate with JSON: {"topic":"Impact to Cashflow","platforms":["blog","linkedin","x"]}
 ```
 
