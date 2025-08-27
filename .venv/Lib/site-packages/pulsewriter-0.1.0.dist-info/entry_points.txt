@@ -1,0 +1,2 @@
+[console_scripts]
+pulsewriter = pulsewriter_cli.main:app
