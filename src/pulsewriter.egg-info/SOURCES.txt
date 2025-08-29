@@ -17,4 +17,5 @@ src/pulsewriter_core/templates/blog.md.j2
 src/pulsewriter_core/templates/devto.md.j2
 src/pulsewriter_core/templates/linkedin.md.j2
 src/pulsewriter_core/templates/x_thread.txt.j2
+tests/test_last.py
 tests/test_sanity.py
