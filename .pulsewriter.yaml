@@ -1,0 +1,5 @@
+# where your blog posts live
+posts_dir: C:\Users\kosel\dev\github\nikitakoselev.github.io\_posts
+out_dir: C:\Users\kosel\dev\pulsewriter\out
+default_platforms: [blog, linkedin, x, devto]
+editor: "code"  # or "idea", "code -r", etc.
